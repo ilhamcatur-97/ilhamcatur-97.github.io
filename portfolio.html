@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    @page {
+        size: A4;
+        margin: 15mm 15mm;
+        background-color: #f8fafc;
+        @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 8pt;
+            color: #64748b;
+        }
+    }
+    
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #1e293b;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        font-size: 10.5pt;
+        background-color: #f8fafc;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #ffffff;
+        padding: 30px 25px;
+        margin: -15mm -15mm 25px -15mm;
+        border-bottom: 4px solid #3b82f6;
+    }
+
+    .header h1 {
+        margin: 0 0 5px 0;
+        font-size: 24pt;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .header p.title {
+        margin: 0 0 15px 0;
+        font-size: 13pt;
+        color: #94a3b8;
+        font-weight: 500;
+    }
+
+    .contact-info {
+        font-size: 9.5pt;
+        color: #cbd5e1;
+        margin-top: 10px;
+    }
+
+    .contact-info span {
+        margin-right: 20px;
+    }
+
+    h2 {
+        font-size: 14pt;
+        color: #0f172a;
+        border-left: 4px solid #3b82f6;
+        padding-left: 10px;
+        margin-top: 25px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        page-break-after: avoid;
+    }
+
+    p {
+        margin: 0 0 10px 0;
+        color: #334155;
+    }
+
+    .job {
+        margin-bottom: 18px;
+        page-break-inside: avoid;
+    }
+
+    .job-header {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .job-title {
+        font-weight: bold;
+        color: #0f172a;
+        font-size: 11pt;
+    }
+
+    .job-company {
+        color: #3b82f6;
+        font-weight: 600;
+    }
+
+    .job-date {
+        float: right;
+        color: #64748b;
+        font-size: 9.5pt;
+        font-style: italic;
+    }
+
+    ul {
+        margin: 5px 0 12px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 4px;
+        color: #334155;
+    }
+
+    .skills-grid {
+        margin-bottom: 15px;
+    }
+
+    .skill-badge {
+        display: inline-block;
+        background-color: #e2e8f0;
+        color: #1e293b;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 9pt;
+        font-weight: 600;
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+
+    .project-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 12px;
+        page-break-inside: avoid;
+    }
+
+    .project-title {
+        font-weight: bold;
+        color: #0f172a;
+        font-size: 11pt;
+        margin-bottom: 4px;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Alex Morgan</h1>
+    <p class="title">Senior Full-Stack Software Engineer & UI/UX Specialist</p>
+    <div class="contact-info">
+        <span>alex.morgan@example.com</span>
+        <span>+1 (555) 234-5678</span>
+        <span>San Francisco, CA</span>
+        <span>github.com/alexmorgan</span>
+    </div>
+</div>
+
+<h2>Professional Summary</h2>
+<p>Innovative and results-driven Senior Software Engineer with over 8 years of experience designing, developing, and scaling high-performance web applications and cloud architectures. Recognized for strong technical leadership, mentoring cross-functional teams, and transforming complex business requirements into intuitive, lightning-fast digital solutions.</p>
+
+<h2>Work Experience</h2>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-title">Lead Full-Stack Engineer</span> @ <span class="job-company">Apex Technologies</span>
+        <span class="job-date">2021 – Present</span>
+    </div>
+    <ul>
+        <li>Architected and deployed cloud-native microservices serving over 2.5 million active users monthly with 99.99% uptime.</li>
+        <li>Spearheaded a frontend refactor using React and TypeScript, boosting core web vital performance scores by 40%.</li>
+        <li>Mentored a team of 8 junior and mid-level engineers, instituting rigorous code review standards and CI/CD automation pipelines.</li>
+    </ul>
+</div>
+
+<div class="job">
+    <div class="job-header">
+        <span class="job-title">Senior Software Developer</span> @ <span class="job-company">Vanguard Digital</span>
+        <span class="job-date">2018 – 2021</span>
+    </div>
+    <ul>
+        <li>Developed RESTful and GraphQL APIs using Node.js, Python/Django, and PostgreSQL, reducing query latency by 35%.</li>
+        <li>Collaborated closely with product managers and UX designers to deliver enterprise dashboard solutions.</li>
+        <li>Migrated legacy monolithic infrastructure to AWS containerized environments utilizing Docker and Kubernetes.</li>
+    </ul>
+</div>
+
+<h2>Key Projects</h2>
+
+<div class="project-card">
+    <div class="project-title">CloudPulse Observability Platform</div>
+    <p>A real-time telemetry and log analysis dashboard built with React, Node.js, and WebSockets. Handles over 50,000 requests per second with sub-millisecond aggregation latency.</p>
+</div>
+
+<div class="project-card">
+    <div class="project-title">FinScale Automated Billing Engine</div>
+    <p>Enterprise subscription and invoicing pipeline supporting multi-currency transactions, automated tax computation, and secure Stripe webhooks integration.</p>
+</div>
+
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+    <span class="skill-badge">JavaScript / TypeScript</span>
+    <span class="skill-badge">Python / Django</span>
+    <span class="skill-badge">React / Next.js</span>
+    <span class="skill-badge">Node.js / Express</span>
+    <span class="skill-badge">PostgreSQL / MongoDB</span>
+    <span class="skill-badge">AWS / Docker / Kubernetes</span>
+    <span class="skill-badge">CI/CD Pipelines</span>
+    <span class="skill-badge">REST & GraphQL APIs</span>
+</div>
+
+<h2>Education</h2>
+<div class="job">
+    <div class="job-header">
+        <span class="job-title">B.S. in Computer Science</span> @ <span class="job-company">University of California, Berkeley</span>
+        <span class="job-date">2014 – 2018</span>
+    </div>
+</div>
+
+</body>
+</html>
