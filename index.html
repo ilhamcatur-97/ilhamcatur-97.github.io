@@ -386,7 +386,7 @@
 
   /* testimonials */
   section.testi{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
   .testi-card{
     background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:30px;
     display:flex;flex-direction:column;gap:18px;position:relative;will-change:transform;
@@ -397,8 +397,6 @@
   .testi-card:hover .qmark{transform:translateY(-4px) scale(1.15)}
   .testi-card p{font-size:.95rem;color:var(--text);flex:1}
   .testi-who{display:flex;align-items:center;gap:12px}
-  .testi-link{display:inline-block;font-size:.8rem;color:var(--gold);text-decoration:underline;text-underline-offset:3px;margin-top:2px}
-  .testi-link:hover{color:var(--gold-soft)}
   .testi-ava{
     width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--gold-soft);
     display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;font-family:var(--serif);
@@ -913,24 +911,18 @@
 <section class="testi" id="testimonials">
   <div class="wrap">
     <div class="sec-head rv"><span class="no">06</span><h2>Testimonials</h2><div class="rule"></div></div>
-    <p class="sec-sub rv">Real words from the people who know my journey — mentors, a Member of Parliament, and the press.</p>
-    <!-- REAL testimonials: Muhammad Fuad (UNSAM), Ilham Pangestu (DPR RI), Waspada press coverage -->
+    <p class="sec-sub rv">Real words from the people who know my journey.</p>
+    <!-- REAL testimonials: Muhammad Fuad (Universitas Samudra), Ilham Pangestu (DPR RI) -->
     <div class="testi-grid">
       <div class="rv" style="--d:.0s"><div class="testi-card tilt">
         <div class="qmark">&ldquo;</div>
         <p>Ilham is determined, likes to give opportunities to others, and is open-minded.</p>
-        <div class="testi-who"><div class="testi-ava">F</div><div><b>Muhammad Fuad</b><span>Lecturer · Universitas Samudra · 2026</span></div></div>
+        <div class="testi-who"><div class="testi-ava">F</div><div><b>Muhammad Fuad</b><span>Lecturer and Researcher · Universitas Samudra · 2026</span></div></div>
       </div></div>
       <div class="rv" style="--d:.12s"><div class="testi-card tilt">
         <div class="qmark">&ldquo;</div>
         <p>We are very proud of Ilham Catur Fhata&rsquo;s achievement &mdash; winning a Master&rsquo;s scholarship to Romania. We supported him with flight tickets and accommodation, for the progress of the nation&rsquo;s children. Never give up: chase your dreams, and show what Acehnese students can achieve.</p>
-        <div class="testi-who"><div class="testi-ava">P</div><div><b>Ilham Pangestu</b><span>Member of Parliament (DPR RI) · Golkar · as reported by Waspada, 2021</span></div></div>
-      </div></div>
-      <div class="rv" style="--d:.24s"><div class="testi-card tilt">
-        <div class="qmark">&ldquo;</div>
-        <p>Born into a modest family, he sold his beloved motorcycle to chase his dream of studying in Romania &mdash; and became the only Acehnese student to win a Master&rsquo;s scholarship there that year.</p>
-        <div class="testi-who"><div class="testi-ava">W</div><div><b>Waspada</b><span>Aceh&rsquo;s daily newspaper · Oct&ndash;Nov 2021</span></div></div>
-        <a class="testi-link" href="https://web.archive.org/web/20211127115402/https://waspada.id/aceh/kejar-impian-beasiswa-ke-rumania-ilham-catur-rela-jual-sepedamotor/" target="_blank" rel="noopener">Read the feature &rarr;</a>
+        <div class="testi-who"><div class="testi-ava">P</div><div><b>Ilham Pangestu</b><span>Member of Parliament (DPR RI) · National · Aceh II</span></div></div>
       </div></div>
     </div>
   </div>
