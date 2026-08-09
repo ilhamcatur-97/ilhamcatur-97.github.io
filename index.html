@@ -702,16 +702,16 @@
       <div class="tl-item rv l">
         <div class="tl-card tilt">
           <div class="tl-top">
-            <span class="tl-role">Erasmus+ Exchange — Business Studies</span>
+            <span class="tl-role">Erasmus+ Exchange Student — Business Studies</span>
             <span class="tl-org">Universität Kassel</span>
             <span class="tl-date">2023 — 2024</span>
           </div>
-          <p class="tl-desc">Erasmus+ exchange year in Business Studies at Universität Kassel, Germany — the experience that deepened my path in talent mobility.</p>
+          <p class="tl-desc">Erasmus+ exchange year at Universität Kassel, Germany — studying European economics and international business as part of my Master&rsquo;s.</p>
           <ul class="tl-list">
-            <li>Supported incoming international exchange students with orientation and daily life</li>
-            <li>Organized intercultural events connecting international and local students</li>
+            <li>Completed coursework projects for subjects like <strong>Economic and Monetary Union</strong>, analysing EU economic policy and its global impact</li>
+            <li>Published an article on EU economic policy &mdash; <em>&ldquo;Kebijakan Ekonomi Uni Eropa dari Masa ke Masa untuk Indonesia Emas 2045&rdquo;</em> &mdash; on Kumparan</li>
           </ul>
-          <div class="tl-tags"><span class="tag">Intercultural communication</span><span class="tag">Event organizing</span><span class="tag">Mentoring</span></div>
+          <div class="tl-tags"><span class="tag">Economics &amp; EU policy</span><span class="tag">Academic writing</span><span class="tag">Intercultural learning</span></div>
         </div>
       </div>
 
@@ -1029,7 +1029,7 @@
       const word = phrases[pi];
       if (!deleting) {
         ci++;
-        if (ci === word.length) { deleting = true; setTimeout(tick, 1900); return; }
+        if (ci > word.length) { deleting = true; setTimeout(tick, 1900); return; }
       } else {
         ci--;
         if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
