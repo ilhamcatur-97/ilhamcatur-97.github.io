@@ -404,6 +404,17 @@
   .testi-who b{display:block;font-size:.9rem;color:var(--ink)}
   .testi-who span{font-size:.78rem;color:var(--muted)}
 
+  /* gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .gal-item{position:relative;display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--paper);transition:transform .3s var(--ease),box-shadow .3s}
+  .gal-item:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .gal-item img{width:100%;height:340px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+  .gal-item:hover img{transform:scale(1.03)}
+  .gal-cap{padding:16px 20px 18px;background:var(--paper)}
+  .gal-cap b{display:block;font-family:var(--serif);font-size:1.02rem;color:var(--ink);margin-bottom:3px}
+  .gal-cap span{font-size:.82rem;color:var(--muted);line-height:1.45}
+  @media(max-width:620px){.gallery-grid{grid-template-columns:1fr}.gal-item img{height:260px}}
+
   /* articles */
   .art-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   .art-card{
@@ -540,6 +551,7 @@
       <a href="#certificates">Certificates</a>
       <a href="#skills">Skills</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#gallery">Gallery</a>
       <a href="#articles">Writing</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="https://drive.google.com/file/d/1L-fOX-rnrwD5iwEiFR52VlUq0DJBpHZ2/view?usp=drive_link" target="_blank" rel="noopener">Résumé <span class="shine"></span>↗</a>
@@ -933,10 +945,36 @@
   </div>
 </section>
 
+<!-- ============ GALLERY ============ -->
+<section class="gallery-sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="no">07</span><h2>Gallery</h2><div class="rule"></div></div>
+    <p class="sec-sub rv">Moments from the journey — Berlin, Brussels and the OISAA America-Europa network.</p>
+    <div class="gallery-grid">
+      <a class="gal-item rv" style="--d:.0s" href="./gallery/berlin.jpg" target="_blank" rel="noopener">
+        <img src="./gallery/berlin.jpg" alt="Ilham in Berlin" loading="lazy">
+        <div class="gal-cap"><b>Berlin</b><span>Exploring the city during my Erasmus+ year</span></div>
+      </a>
+      <a class="gal-item rv" style="--d:.08s" href="./gallery/ambassador-1.jpg" target="_blank" rel="noopener">
+        <img src="./gallery/ambassador-1.jpg" alt="Audience with Ambassador Andri Hadi" loading="lazy">
+        <div class="gal-cap"><b>Audience with H.E. Mr. Andri Hadi</b><span>Indonesian Ambassador to the EU &amp; Belgium — as Coordinator of the America-Europa Indonesian Students&rsquo; Association (OISAA)</span></div>
+      </a>
+      <a class="gal-item rv" style="--d:.16s" href="./gallery/ambassador-2.jpg" target="_blank" rel="noopener">
+        <img src="./gallery/ambassador-2.jpg" alt="OISAA leaders with the Ambassador" loading="lazy">
+        <div class="gal-cap"><b>OISAA America-Europa network</b><span>Leaders of Indonesian associations from the Netherlands, Spain, Belgium, Romania, Hungary, Austria, Switzerland, Lithuania, France and the UK — plus delegates from Germany, T&uuml;rkiye and Italy</span></div>
+      </a>
+      <a class="gal-item rv" style="--d:.24s" href="./gallery/office.jpg" target="_blank" rel="noopener">
+        <img src="./gallery/office.jpg" alt="Visiting the Ambassador's office" loading="lazy">
+        <div class="gal-cap"><b>Brussels</b><span>Visiting the Ambassador&rsquo;s office</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ ARTICLES ============ -->
 <section id="articles">
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">07</span><h2>Writing</h2><div class="rule"></div></div>
+    <div class="sec-head rv"><span class="no">08</span><h2>Writing</h2><div class="rule"></div></div>
     <p class="sec-sub rv">Published writing across Indonesian media — student life, leadership, policy and community voices.</p>
     <!-- REAL: published articles with live links -->
     <div class="art-grid">
@@ -1111,7 +1149,7 @@
       }
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
-  ['about','experience','education','certificates','skills','testimonials','articles','contact'].forEach(id => {
+  ['about','experience','education','certificates','skills','testimonials','gallery','articles','contact'].forEach(id => {
     const el = document.getElementById(id);
     if (el) spy.observe(el);
   });
